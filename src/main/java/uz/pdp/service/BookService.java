@@ -44,7 +44,7 @@ public class BookService {
 
     public BookDto get(Long id) {
         Book book = repository.findById(id).orElseThrow(() -> {
-            throw new RuntimeException("Topilmadi");
+            throw new RuntimeException("Not Found");
         });
         return mapper.toDto(book);
     }
